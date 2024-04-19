@@ -19,7 +19,7 @@ const userSchema = new mongoose.Schema(
             lowercase: true,
             trim: true,
         },
-        fullname: {
+        fullName: {
             type: String,
             required: true,
             trim: true,
@@ -29,7 +29,7 @@ const userSchema = new mongoose.Schema(
             type: String,//Cloudinary url
             required: true,
         },
-        avatar: {
+        coverImage: {
             type: String,//Cloudinary url
         },
         watchHistory: [
@@ -85,5 +85,4 @@ userSchema.methods.generateRefreshToken=function(){
         }
     )
 }
-
-export default User = mongoose.model('User', userSchema);
+export const User = mongoose.model("User", userSchema)
